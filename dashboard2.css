@@ -1,0 +1,273 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(26, 34, 57);
+    height:100vh;
+    overflow: hidden;
+  }
+
+  .checkbtn{
+    font-size:25px;
+    color:#ffffff;
+    float:right;
+    margin:20px;
+    cursor:pointer;
+    display:none;
+  }
+  
+  #check{
+    display:none;
+  }
+  
+  
+
+
+ 
+  .logo{
+    padding:30px 0px 30px 0px;
+    height:80px;
+  }
+  
+  
+  .section-btn {
+    width:200px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 20px 0;
+    font-size: 16px;
+    outline: none;
+    transition: color 0.3s;
+    position:relative;
+  }
+  
+  .section-btn:hover {
+    background-color: #00e444;
+  }
+  
+  .section-btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5px;
+    right: 5px;
+    height: 1px;
+    background-color: white;
+  }
+  
+  
+
+.container{
+    margin:0px;
+    overflow: hidden; /* Oculta el scroll para el contenedor principal */
+}
+
+.row{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    overflow: auto;
+}
+
+
+.card-01{
+    background-color: #008cff;
+    position:relative;
+    flex:1;
+    max-width:200px;
+    height: 100vh;
+    box-shadow: 0 0 5px rgb(0,0,0,0.2);
+}
+
+.card-02{
+    background-color: #ffffff;
+    position:relative;
+    flex:1;
+    max-width:100%;
+    height: 100vh;
+    box-shadow: 0 0 5px rgb(0,0,0,0.2);
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.card-02::-webkit-scrollbar {
+    width:12px;
+  }
+
+  
+  .card-02::-webkit-scrollbar-thumb {
+    background-color: #646464; /* Color de fondo de la pista */
+    border-radius: 50px; /* Borde redondeado para la pista */
+  }
+
+
+.row2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-03{
+    background-color: #4194a700;
+    position:relative;
+    flex: 1; /* Ancho de los bloques */
+    max-width:50%;
+    height: 100vh;
+    margin:10px;
+    box-sizing: border-box;
+
+}
+
+
+.step-wizard-list {
+    background: #ffffff;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    color: #333;
+    border-radius: 50px;
+    list-style-type: none;
+    display: flex;
+    padding: 20px 10px;
+    margin:10px;
+    position: relative;
+    z-index: 10;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: center;
+  }
+
+
+  .card-05{
+    background:#50A7FF;
+    position:relative;
+    flex:1;
+    max-width:100%;
+    height: 50px;
+    margin:10px;
+    border-radius: 50px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-06{
+    background:#ffffff;
+    position:relative;
+    flex:1;
+    max-width:50px;
+    height: 50px;
+    margin:5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0,0,0,0.4);
+    display: flex; /* Agrega flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    font-size: 26px; /* Tamaño de fuente del número */
+    color: rgb(0, 0, 0);
+}
+
+
+.card-07 {
+    background: #ffffff00;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    color: #333;
+    display: flex;
+    padding: 20px 10px;
+    margin:10px;
+    width:100%;
+    justify-content: center;
+  }
+
+  .card-08 {
+    background: #ffffff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    color: #333;
+    border-radius: 50px;
+    list-style-type: none;
+    display: flex;
+    padding: 20px 10px;
+    margin:10px;
+    position: relative;
+    z-index: 10;
+    flex-wrap: wrap;
+    width:600px;
+    height:280px;
+    justify-content: center;
+  }
+
+
+@media (max-width:1100px){
+    .section-btn {
+        width:100%;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 20px 0;
+        font-size: 16px;
+        outline: none;
+        transition: color 0.3s;
+        position:relative;
+      }
+
+    .card-01{
+        flex:100%;
+        max-width:100%;
+        height:60px;
+    }
+    .card-02{
+        flex:100%;
+        max-width:100%;
+    }
+
+    .card-03{
+        flex:100%;
+        max-width:100%;
+    }
+    .step-wizard-list{
+        flex:100%;
+        max-width:100%;
+    }
+
+    
+    
+    #check:checked~.card-02{
+        display:none;
+      }
+    #check:checked~.card-01{
+        height:100vh;
+      }
+
+
+    
+    .logo{
+        padding:0px;
+        height:60px;
+    }
+
+    .checkbtn{
+        display:block;
+      }
+      
+   
+    
+      .checkbtn .fa-bars {
+        display: block;
+      }
+      
+      .checkbtn .fa-times {
+        display: none;
+      }
+      
+      #check:checked ~ .checkbtn .fa-bars {
+        display: none;
+      }
+      
+      #check:checked ~ .checkbtn .fa-times {
+        display: block;
+      }
+}
+
+
+

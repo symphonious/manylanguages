@@ -1,0 +1,36 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+@keyframes fillBlue {
+  0% {
+    border-top: 5px solid #0973ed;
+  }
+  100% {
+    border-top: 5px solid #0973ed;
+    border-right: 5px solid #0973ed;
+    border-bottom: 5px solid #0973ed;
+    border-left: 5px solid #0973ed;
+  }
+}
+
+.loader_sound::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  border-radius: 50%;
+  border: 5px solid #f4f4f0;
+  border-top: 5px solid #0973ed;
+  animation: spin 1s linear infinite, fillBlue 10s linear infinite;
+}
+
+  

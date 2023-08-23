@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dashboard2.css">
+  <link rel="stylesheet" href="loader.css">
+  <link rel="stylesheet" href="speech2.css">
+  <link rel="stylesheet" href="dashboard_stepbar.css">
+  <link rel="stylesheet" href="elemento_dinamico.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <title>Dashboard</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+        <div class="card-01">
+            <div class="nav">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </label>
+        
+
+                <a href="dashboard.html" class="enlace">
+                    <img src="images/logoweb3.png" alt="Logo" class="logo">
+                </a>
+
+                
+            </div>
+            
+            <button id="loginButton" class="section-btn" onclick="toggleSection('home')">Home</button>
+            <button class="section-btn" onclick="toggleSection('configuration')">Configuration</button>
+            <button class="section-btn" onclick="toggleSection('logout')">Log Out</button>
+        </div>
+        <div class="card-02">
+                <div class="row2">
+                    <div class="card-03">
+                        <div class="row2">
+                            <div class="step-wizard-list">
+                                <li class="step-wizard-item current-item">
+                                    <span class="progress-count">1</span>
+                                </li>
+                                <li class="step-wizard-item">
+                                    <span class="progress-count">2</span>
+                                </li>
+                                <li class="step-wizard-item">
+                                    <span class="progress-count">3</span>
+                                </li>
+                                <li class="step-wizard-item">
+                                    <span class="progress-count">4</span>
+                                </li>
+                            </div>
+                        </div>
+                        <div class="row2">
+                            <div class="card-05">
+                                <button id="backButton" class="stepButton">Back</button>
+                            </div>
+                            <div class="card-05">
+                                <button id="nextButton" class="stepButton">Next</button>
+                            </div>
+                        </div>
+                        <div class="row2">
+                            <div class="step-wizard-list">
+                                <div id="block1" class="dinamic">
+                                    <div class="text-title">
+                                        <span>Welcome</span>
+                                    </div>
+                                    <br>
+                                    <div class="text-content">
+                                        <span>titulo welcome</span>
+                                    </div>
+                                </div>
+
+                                <div id="block2" class="dinamic">
+                                    <div class="text-title">
+                                        <span>Select your languaje</span>
+                                    </div>
+                                    <br>
+                                    <div class="text-content">
+                                        <span>Select your languaje</span>
+                                    </div>
+                                    
+                                    <div class="select">
+                                        <select name="format2" id="format2">
+                                            <option selected disabled>language 2</option>
+                                            <option value="English">English</option>
+                                            <option value="Spanish">Spanish</option>
+                                            <option value="Italian">Italian</option>
+                                            <option value="German">German</option>
+                                            <option value="Portugues">Portugues</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div id="block3" class="dinamic">
+                                    <div class="text-title">
+                                        <span>Verification Code</span>
+                                    </div>
+                                    <br>
+                                    <div class="text-content">
+                                        <span>Copy and paste the following code into your desktop app</span>
+                                    </div>
+                                    <br>
+                                    <div class="row2">
+                                        <div id="digit1" class="card-06"><span>1</span></div>
+                                        <div id="digit2" class="card-06"><span>2</span></div>
+                                        <div id="digit3" class="card-06"><span>3</span></div>
+                                        <div id="digit4" class="card-06"><span>4</span></div>
+                                        <div id="digit5" class="card-06"><span>5</span></div>
+                                    </div>
+                                </div>
+
+                                <div id="block4" class="dinamic">
+                                    <div class="text-title">
+                                        <span>Loading...</span>
+                                        
+                                    </div>
+                                    <div class="row2">
+                                        <div id="loader_sound" class="loader_sound"></div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div id="block4" class="dinamic">
+                                    
+                                    <div class="slider_container">
+                                        <i class="fa fa-volume-down"></i>
+                                         <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                                         <i class="fa fa-volume-up"></i>
+                                    </div>
+                                    <div class="buttons">
+                                         <div class="playpause-track">
+                                             <div id="playButton" class="play"></div>
+                                         </div>
+                                         <div id="wave">
+                                             <span class="stroke"></span>
+                                             <span class="stroke"></span>
+                                             <span class="stroke"></span>
+                                             <span class="stroke"></span>
+                                             <span class="stroke"></span>
+                                             <span class="stroke"></span>
+                                             <span class="stroke"></span>
+                                         </div>  
+                                    </div>
+                                    <div id="translated_text" class="translated_text"></div>
+                                </div>
+                                
+                                
+                                
+                               
+                            </div>
+                            
+                            
+                        </div>
+
+                       
+                        
+                    </div>
+                    
+                    <div class="card-03"></div>
+                </div>
+                <br><br><br><br>
+                
+        </div>
+    </div>
+    
+  </div>
+  <style id="custom-style"></style>
+  <script src="dashboard2.js"></script>
+  <script src="script_dashboard.js"></script>
+  <script src="temporal_key.js"></script>
+  <script src="token.js"></script>
+
+</body>
+</html>
